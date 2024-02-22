@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ctrl : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-
-    public GameObject piege;
+    public static int PV;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,11 +13,6 @@ public class ctrl : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
     {
         
     }

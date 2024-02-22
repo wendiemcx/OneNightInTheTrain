@@ -143,7 +143,7 @@ public class SUPERCharacterAIO : MonoBehaviour{
     //Walking/Sprinting/Crouching
     public GroundInfo currentGroundInfo = new GroundInfo();
     float standingHeight;
-    float currentGroundSpeed;
+    public float currentGroundSpeed;
     Vector3 InputDir;
     float HeadRotDirForInput;
     Vector2 MovInput;
