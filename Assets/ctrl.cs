@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ctrl : MonoBehaviour
 {
+    public GameObject piege;
     // Start is called before the first frame update
     void Start()
     {
