@@ -1,34 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class ctrl_hache : MonoBehaviour
+public class ctrl_glass : MonoBehaviour
 {
     public GameObject hache_affiche;
+    public int destruction;
     // Start is called before the first frame update
     void Start()
     {
-        hache_affiche.SetActive(false);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     private void OnTriggerStay(Collider other)
     {
         if (other.name == "perso")
         {
-
-            if (Input.GetKey(KeyCode.E))
+            if (hache_affiche.activeSelf)
             {
-                Destroy(gameObject);
-                hache_affiche.SetActive(true);
-            }   
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    destruction = destruction -1;
+                    if (destruction == 0)
+                    {
+                        Destroy(gameObject);
+                    }
 
+                }
+
+            }
         }
     }
 }
