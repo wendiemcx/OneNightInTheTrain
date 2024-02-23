@@ -1,43 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
-using SUPERCharacter;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ctrl_liquid : MonoBehaviour
+public class ctrl_toile : MonoBehaviour
 {
-    public GameObject player;
+    public ctrl_toile2 toile;
+   
+    public float duration = 5.0f;
+
     public GameObject ScorePV;
+
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("perso");
-
         GameManager.PV = 100;
         ScorePV = GameObject.Find("Progressbar");
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name == "perso")
+        if(other.name == "perso")
         {
-            other.GetComponent<SUPERCharacterAIO>().currentGroundSpeed = 30;
+            toile.DisplayWeb(duration);
             GameManager.PV = GameManager.PV - 10;
             ScorePV.GetComponent<Image>().fillAmount = GameManager.PV / 100.0f;
-        }
-    }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.name == "perso")
-        {
-            other.GetComponent<SUPERCharacterAIO>().currentGroundSpeed = 70;
-        }
+        }    
+        
+
     }
 }
