@@ -26,7 +26,7 @@ public class ctrl_light : MonoBehaviour
             forte_light.SetActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.T) && GameManager.Power > 0)
         {
             faible_light.SetActive(false);
             forte_light.SetActive(true);
@@ -44,7 +44,7 @@ public class ctrl_light : MonoBehaviour
             }
         if (GameManager.Power <= 0)
         {
-            Destroy(forte_light);
+            forte_light.SetActive(false);
             faible_light.SetActive(true );
         }
 
