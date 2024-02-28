@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ctrl_fantome : MonoBehaviour
 {
     public GameObject ScorePV;
+    
     // Start is called before the first frame update
     void Start()
     {
