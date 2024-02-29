@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ctrl_toile : MonoBehaviour
 {
-    public ctrl_toile2 toile;
+    ctrl_toile2 toileUI;
    
     public float duration = 5.0f;
 
@@ -16,6 +16,7 @@ public class ctrl_toile : MonoBehaviour
     {
         GameManager.PV = 100;
         ScorePV = GameObject.Find("Progressbar");
+        toileUI = FindObjectOfType<ctrl_toile2>();
     }
 
     // Update is called once per frame
@@ -25,7 +26,7 @@ public class ctrl_toile : MonoBehaviour
     {
         if(other.name == "perso")
         {
-            toile.DisplayWeb(duration);
+            toileUI.DisplayWeb(duration);
             GameManager.PV = GameManager.PV - 10;
             ScorePV.GetComponent<Image>().fillAmount = GameManager.PV / 100.0f;
 
