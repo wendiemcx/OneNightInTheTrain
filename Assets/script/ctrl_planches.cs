@@ -7,6 +7,7 @@ public class ctrl_planches : MonoBehaviour
 {
     public GameObject hache_affiche;
     public int destruction;
+    public GameObject planches;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +30,7 @@ public class ctrl_planches : MonoBehaviour
                     destruction = destruction - 1;
                     if (destruction == 0)
                     {
-                        Destroy(gameObject);
+                        Destroy(planches);
                     }
 
                 }
