@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 
-public class ctrl_glass : MonoBehaviour
+public class ctrl_planches : MonoBehaviour
 {
     public GameObject hache_affiche;
     public int destruction;
-    public GameObject vitre;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,6 @@ public class ctrl_glass : MonoBehaviour
     {
         
     }
-
     private void OnTriggerStay(Collider other)
     {
         if (other.name == "perso")
@@ -27,10 +26,10 @@ public class ctrl_glass : MonoBehaviour
             {
                 if (Input.GetButtonDown("Fire1"))
                 {
-                    destruction = destruction -1;
+                    destruction = destruction - 1;
                     if (destruction == 0)
                     {
-                        Destroy(vitre);
+                        Destroy(gameObject);
                     }
 
                 }
