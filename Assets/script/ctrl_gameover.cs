@@ -10,6 +10,8 @@ public class ctrl_gameover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         New.onClick.AddListener(action_New);
     }
 

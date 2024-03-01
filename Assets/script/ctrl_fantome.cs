@@ -24,7 +24,7 @@ public class ctrl_fantome : MonoBehaviour
     {
         if (other.name == "perso")
         {
-            GameManager.PV = GameManager.PV - 10;
+            GameManager.PV = GameManager.PV - 15;
             ScorePV.GetComponent<Image>().fillAmount = GameManager.PV / 100.0f;
         }
     }

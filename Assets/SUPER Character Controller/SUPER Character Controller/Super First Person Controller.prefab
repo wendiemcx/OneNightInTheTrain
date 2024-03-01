@@ -1012,7 +1012,7 @@ MonoBehaviour:
   sprintKey_L: 304
   crouchKey_L: 9
   slideKey_L: 118
-  canSprint: 1
+  canSprint: 0
   isSprinting: 0
   toggleSprint: 0
   sprintOverride: 0
