@@ -1007,7 +1007,7 @@ MonoBehaviour:
   enableMovementControl: 1
   walkingSpeed: 70
   sprintingSpeed: 401
-  crouchingSpeed: 69
+  crouchingSpeed: 60
   decelerationSpeed: 240
   sprintKey_L: 304
   crouchKey_L: 9
