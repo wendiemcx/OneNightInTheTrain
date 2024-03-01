@@ -9,7 +9,7 @@ public class ctrl_liquid : MonoBehaviour
     GameObject player;
     GameObject ScorePV;
 
-    GameObject splash;
+    public GameObject splash;
     
     // Start is called before the first frame update
     void Start()
@@ -19,7 +19,6 @@ public class ctrl_liquid : MonoBehaviour
         GameManager.PV = 100;
         ScorePV = GameObject.Find("Progressbar");
 
-        splash = GameObject.Find("splash");
     }
 
     // Update is called once per frame
@@ -32,7 +31,6 @@ public class ctrl_liquid : MonoBehaviour
     {
         if (other.name == "perso")
         {
-            splash.SetActive(false);
             splash.SetActive(true);
             other.GetComponent<SUPERCharacterAIO>().currentGroundSpeed = 30;
             GameManager.PV = GameManager.PV - 10;
@@ -45,6 +43,7 @@ public class ctrl_liquid : MonoBehaviour
         if (other.name == "perso")
         {
             other.GetComponent<SUPERCharacterAIO>().currentGroundSpeed = 70;
+            splash.SetActive(false);
         }
     }
 }
