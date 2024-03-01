@@ -6,8 +6,11 @@ using UnityEngine.UI;
 
 public class ctrl_liquid : MonoBehaviour
 {
-    public GameObject player;
-    public GameObject ScorePV;
+    GameObject player;
+    GameObject ScorePV;
+
+    GameObject splash;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +18,8 @@ public class ctrl_liquid : MonoBehaviour
 
         GameManager.PV = 100;
         ScorePV = GameObject.Find("Progressbar");
+
+        splash = GameObject.Find("splash");
     }
 
     // Update is called once per frame
@@ -27,6 +32,8 @@ public class ctrl_liquid : MonoBehaviour
     {
         if (other.name == "perso")
         {
+            splash.SetActive(false);
+            splash.SetActive(true);
             other.GetComponent<SUPERCharacterAIO>().currentGroundSpeed = 30;
             GameManager.PV = GameManager.PV - 10;
             ScorePV.GetComponent<Image>().fillAmount = GameManager.PV / 100.0f;
