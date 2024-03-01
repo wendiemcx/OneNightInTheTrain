@@ -35,7 +35,7 @@ public class ctrl_light : MonoBehaviour
             {
                 timer = timer + Time.deltaTime;
 
-                if (timer >2.0f) 
+                if (timer >1.0f) 
                 { 
                     GameManager.Power = GameManager.Power - 1;
                     Pourcentage.GetComponent<Text>().text = GameManager.Power.ToString();

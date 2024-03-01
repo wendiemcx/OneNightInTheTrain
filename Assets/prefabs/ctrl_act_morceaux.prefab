@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9115029078011007985}
   - component: {fileID: 3721133810545512203}
+  - component: {fileID: 7493929405881790405}
   m_Layer: 0
   m_Name: ctrl_act_morceaux
   m_TagString: Untagged
@@ -49,6 +50,20 @@ MonoBehaviour:
   timer: 0
   keepActivatedTimer: 2.5
   currentKeepActivatedTimer: 0
+--- !u!114 &7493929405881790405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730205250479185979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263f78361d484424692122c88a849976, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  verticalOffset: 0.24
+  gizmoColor: {r: 1, g: 0.78736246, b: 0, a: 0}
 --- !u!1001 &4793995211724014463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59,15 +74,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1284588926082566986, guid: ae52934ff318379429a89ae3fe175a41, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.059981763
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1284588926082566986, guid: ae52934ff318379429a89ae3fe175a41, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0572133
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1284588926082566986, guid: ae52934ff318379429a89ae3fe175a41, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.87601
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1284588926082566986, guid: ae52934ff318379429a89ae3fe175a41, type: 3}
       propertyPath: m_LocalRotation.w
@@ -103,7 +118,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4325662428932855346, guid: ae52934ff318379429a89ae3fe175a41, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9200946789326944217, guid: ae52934ff318379429a89ae3fe175a41, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.3094518
+      objectReference: {fileID: 0}
+    - target: {fileID: 9200946789326944217, guid: ae52934ff318379429a89ae3fe175a41, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.3094518
+      objectReference: {fileID: 0}
+    - target: {fileID: 9200946789326944217, guid: ae52934ff318379429a89ae3fe175a41, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.3584906
+      objectReference: {fileID: 0}
+    - target: {fileID: 9200946789326944217, guid: ae52934ff318379429a89ae3fe175a41, type: 3}
+      propertyPath: InitialModule.startColor.minColor.b
+      value: 0.3962264
+      objectReference: {fileID: 0}
+    - target: {fileID: 9200946789326944217, guid: ae52934ff318379429a89ae3fe175a41, type: 3}
+      propertyPath: InitialModule.startColor.minColor.g
+      value: 0.3836107
+      objectReference: {fileID: 0}
+    - target: {fileID: 9200946789326944217, guid: ae52934ff318379429a89ae3fe175a41, type: 3}
+      propertyPath: InitialModule.startColor.minColor.r
+      value: 0.37940547
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
