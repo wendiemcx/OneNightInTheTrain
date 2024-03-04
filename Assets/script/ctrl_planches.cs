@@ -9,6 +9,7 @@ public class ctrl_planches : MonoBehaviour
     public int destruction;
     public GameObject planches;
     public GameObject hache;
+    public GameObject bulle;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class ctrl_planches : MonoBehaviour
     {
         if (other.name == "perso")
         {
+            bulle.SetActive(true);
             if (hache_affiche.activeSelf)
             {
                 hache.SetActive(true);
@@ -35,7 +37,7 @@ public class ctrl_planches : MonoBehaviour
 
                     if (destruction == 0)
                     {
-                        Destroy(planches);
+                        planches.SetActive(false);
                         hache.SetActive(false);
                     }
 
