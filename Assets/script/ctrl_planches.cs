@@ -36,6 +36,7 @@ public class ctrl_planches : MonoBehaviour
                     if (destruction == 0)
                     {
                         Destroy(planches);
+                        hache.SetActive(false);
                     }
 
                 }

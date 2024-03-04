@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Claims;
 using UnityEngine;
 
 public class ctrl_active_spark : MonoBehaviour
 {
     public float timer;
     public GameObject sparks;
+    public GameObject eclair;
+    public float timer2;
     // Start is called before the first frame update
     void Start()
     {
         timer = 0.0f;
+
     }
 
     // Update is called once per frame
@@ -25,7 +29,8 @@ public class ctrl_active_spark : MonoBehaviour
         {
             sparks.SetActive(false);
             timer = 1.0f;
-
         }
+
+
     }
 }
