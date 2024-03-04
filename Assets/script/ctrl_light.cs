@@ -10,6 +10,7 @@ public class ctrl_light : MonoBehaviour
     public GameObject forte_light;
     public GameObject Pourcentage;
     public float timer;
+    public GameObject attention;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class ctrl_light : MonoBehaviour
         {
             faible_light.SetActive(true);
             forte_light.SetActive(false);
+            attention.SetActive(false);
         }
 
         if (Input.GetKeyDown(KeyCode.T) && GameManager.Power > 0)
@@ -37,6 +39,7 @@ public class ctrl_light : MonoBehaviour
 
                 if (timer >1.0f) 
                 { 
+                    attention.SetActive(true);
                     GameManager.Power = GameManager.Power - 1;
                     Pourcentage.GetComponent<Text>().text = GameManager.Power.ToString();
                     timer = 0.0f;
@@ -44,6 +47,7 @@ public class ctrl_light : MonoBehaviour
             }
         if (GameManager.Power <= 0)
         {
+            attention.SetActive(false) ;
             forte_light.SetActive(false);
             faible_light.SetActive(true );
         }

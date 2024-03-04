@@ -12,6 +12,7 @@ public class ctrl_sparks : MonoBehaviour
     public float timer;
     public GameObject player;
     public GameObject ScorePV;
+    public GameObject eclair;
 
     bool isPlayerInTrigger;
 
@@ -23,6 +24,7 @@ public class ctrl_sparks : MonoBehaviour
         timer = 0.0f;
         GameManager.PV = 100;
         ScorePV = GameObject.Find("Progressbar");
+        eclair.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -32,10 +34,14 @@ public class ctrl_sparks : MonoBehaviour
             GameManager.PV = GameManager.PV - 10;
             ScorePV.GetComponent<Image>().fillAmount = GameManager.PV / 100.0f;
             SUPERCharacterAIO playerCharacterAIO = other.GetComponent<SUPERCharacterAIO>();
+            eclair.SetActive(true);
 
             playerCharacterAIO.chockDuration = 2.0f;
             playerCharacterAIO.currentGroundSpeed = 0;
 
         }
+
     }
+
+
 }
