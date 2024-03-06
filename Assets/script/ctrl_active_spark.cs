@@ -9,11 +9,12 @@ public class ctrl_active_spark : MonoBehaviour
     public GameObject sparks;
     public GameObject eclair;
     public float timer2;
+    public AudioSource son;
     // Start is called before the first frame update
     void Start()
     {
         timer = 0.0f;
-
+        son = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -23,6 +24,7 @@ public class ctrl_active_spark : MonoBehaviour
         if (timer > 5.0f)
         {
             sparks.SetActive(true);
+            son.Play(0);
         }
 
         if (timer >6.0f)

@@ -15,12 +15,14 @@ public class ctrl_planches : MonoBehaviour
 
     public float timer_anim_hache;
     public bool timer_flag;
+    AudioSource son;
 
     // Start is called before the first frame update
     void Start()
     {
         timer_anim_hache = 0;
         timer_flag = false;
+        son = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -54,6 +56,8 @@ public class ctrl_planches : MonoBehaviour
                 if (timer_anim_hache > 0.5f)
                 {
                     destruction = destruction - 1;
+                    Debug.Log("son de bois qui casse");
+                    son.Play(0);
 
                     if (destruction == 0)
                     {

@@ -11,11 +11,14 @@ public class ctrl_light : MonoBehaviour
     public GameObject Pourcentage;
     public float timer;
     public GameObject attention;
+    public AudioSource son;
+
     // Start is called before the first frame update
     void Start()
     {
         Pourcentage = GameObject.Find("AffichePower");
         GameManager.Power = 100;
+        son = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -26,12 +29,14 @@ public class ctrl_light : MonoBehaviour
             faible_light.SetActive(true);
             forte_light.SetActive(false);
             attention.SetActive(false);
+            son.Play(0);
         }
 
         if (Input.GetKeyDown(KeyCode.T) && GameManager.Power > 0)
         {
             faible_light.SetActive(false);
             forte_light.SetActive(true);
+            son.Play(0);
         }
             if (forte_light.activeSelf)
             {
@@ -49,7 +54,8 @@ public class ctrl_light : MonoBehaviour
         {
             attention.SetActive(false) ;
             forte_light.SetActive(false);
-            faible_light.SetActive(true );
+            faible_light.SetActive(true);
+            GetComponent<AudioSource>().enabled = false;
         }
 
         

@@ -11,14 +11,16 @@ public class ctrl_glass : MonoBehaviour
     public GameObject baton;
     public GameObject fer;
     public GameObject hache;
-
     public float timer_anim_hache;
     public bool timer_flag;
+    AudioSource son;
+
     // Start is called before the first frame update
     void Start()
     {
         porte.GetComponent<Animator>().enabled = false;
         timer_anim_hache = 0;
+        son = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -42,12 +44,13 @@ public class ctrl_glass : MonoBehaviour
 
                    timer_flag = true;
                     hache.GetComponent<Animator>().SetTrigger("tapptrig");
-
+                    Debug.Log("son de bois qui casse");
+                    son.Play(0);
                 }
 
                 if (timer_flag == true)
                 {
-                    Debug.Log("déclanche le timer");
+                    Debug.Log("déclenche le timer");
                     timer_anim_hache += Time.deltaTime; // on déclanche le timer
                 }
 
@@ -59,7 +62,7 @@ public class ctrl_glass : MonoBehaviour
 
                     if (destruction == 0)
                     {
-                        
+
                         porte.GetComponent<Animator>().enabled = true;
                     }
 
