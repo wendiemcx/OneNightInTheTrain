@@ -9,10 +9,12 @@ using UnityEngine.UI;
 
 public class ctrl_sparks : MonoBehaviour
 {
+    ctrl_sparks2 EclairUI;
     public float timer;
     public GameObject player;
     public GameObject ScorePV;
     public GameObject eclair;
+    public float duration = 0.5f;
 
     bool isPlayerInTrigger;
 
@@ -24,6 +26,7 @@ public class ctrl_sparks : MonoBehaviour
         timer = 0.0f;
         GameManager.PV = 100;
         ScorePV = GameObject.Find("Progressbar");
+        EclairUI = FindObjectOfType<ctrl_sparks2>();
 
     }
 
@@ -36,10 +39,11 @@ public class ctrl_sparks : MonoBehaviour
     {
         if (other.name == "perso")
         {
+            EclairUI.DisplayElec(duration);
             GameManager.PV = GameManager.PV - 10;
             ScorePV.GetComponent<Image>().fillAmount = GameManager.PV / 100.0f;
             SUPERCharacterAIO playerCharacterAIO = other.GetComponent<SUPERCharacterAIO>();
-            Instantiate(eclair, transform.position, Quaternion.identity);
+            //Instantiate(eclair, transform.position, Quaternion.identity);
 
             playerCharacterAIO.chockDuration = 2.0f;
             playerCharacterAIO.currentGroundSpeed = 0;
