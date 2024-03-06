@@ -6,16 +6,12 @@ using UnityEngine.UI;
 
 public class ctrl_liquid : MonoBehaviour
 {
-    GameObject player;
-    GameObject ScorePV;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("perso");
-
-        GameManager.PV = 100;
-        ScorePV = GameObject.Find("Progressbar");
+ 
 
     }
 
@@ -25,23 +21,7 @@ public class ctrl_liquid : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.name == "perso")
-        {
-            //splashUI.DisplaySplash(duration);
-            other.GetComponent<SUPERCharacterAIO>().currentGroundSpeed = 30;
-            GameManager.PV = GameManager.PV - 10;
-            ScorePV.GetComponent<Image>().fillAmount = GameManager.PV / 100.0f;
-        }
-    }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.name == "perso")
-        {
-            other.GetComponent<SUPERCharacterAIO>().currentGroundSpeed = 70;
 
-        }
-    }
+
 }

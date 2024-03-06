@@ -11,11 +11,16 @@ public class ctrl_piegeperso : MonoBehaviour
     public GameObject splash;
     GameObject ScorePV;
     public GameObject player;
+    ctrl_piege2 SplashUI;
+    public float duration = 1.0f;
+    AudioSource son;
     // Start is called before the first frame update
     void Start()
     {
+        SplashUI = FindObjectOfType<ctrl_piege2>();
         GameManager.PV = 100;
         ScorePV = GameObject.Find("Progressbar");
+        son = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -28,7 +33,10 @@ public class ctrl_piegeperso : MonoBehaviour
     {
         if (other.tag == "flaque")
         {
-            splash.SetActive(true);
+            son.time = 0.7f;
+            son.Play(0);
+            SplashUI.DisplaySplash(duration);
+            //splash.SetActive(true);
             player.GetComponent<SUPERCharacterAIO>().currentGroundSpeed = 30;
             GameManager.PV = GameManager.PV - 10;
             ScorePV.GetComponent<Image>().fillAmount = GameManager.PV / 100.0f;
@@ -39,7 +47,7 @@ public class ctrl_piegeperso : MonoBehaviour
         if (other.tag == "flaque")
         {
             player.GetComponent<SUPERCharacterAIO>().currentGroundSpeed = 70;
-            splash.SetActive(false);
+            //splash.SetActive(false);
 
         }
     }
