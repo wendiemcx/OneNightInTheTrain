@@ -803,6 +803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   splash: {fileID: 842737587}
+  player: {fileID: 281542788}
 --- !u!65 &186569954
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -822,8 +823,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.36145833, y: 0.17323446, z: 0.40503985}
-  m_Center: {x: 0.032825265, y: -0.83790934, z: 0.113321744}
+  m_Size: {x: 0.48230958, y: 0.17323446, z: 0.46878967}
+  m_Center: {x: 0.004038602, y: -0.83790934, z: -0.0071079135}
 --- !u!1 &214246566
 GameObject:
   m_ObjectHideFlags: 0
@@ -8354,10 +8355,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 693040435}
     m_Modifications:
-    - target: {fileID: 5616797019609919714, guid: f8c73dc08e8d1f54f94dfba198fd0c81, type: 3}
-      propertyPath: splash
-      value: 
-      objectReference: {fileID: 842737587}
     - target: {fileID: 6045214649693561672, guid: f8c73dc08e8d1f54f94dfba198fd0c81, type: 3}
       propertyPath: m_Name
       value: flaque Variant
@@ -9585,10 +9582,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 693040435}
     m_Modifications:
-    - target: {fileID: 5616797019609919714, guid: f8c73dc08e8d1f54f94dfba198fd0c81, type: 3}
-      propertyPath: splash
-      value: 
-      objectReference: {fileID: 842737587}
     - target: {fileID: 6045214649693561672, guid: f8c73dc08e8d1f54f94dfba198fd0c81, type: 3}
       propertyPath: m_Name
       value: flaque Variant (1)
@@ -11791,10 +11784,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 693040435}
     m_Modifications:
-    - target: {fileID: 5616797019609919714, guid: f8c73dc08e8d1f54f94dfba198fd0c81, type: 3}
-      propertyPath: splash
-      value: 
-      objectReference: {fileID: 842737587}
     - target: {fileID: 6045214649693561672, guid: f8c73dc08e8d1f54f94dfba198fd0c81, type: 3}
       propertyPath: m_Name
       value: flaque

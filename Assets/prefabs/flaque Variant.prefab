@@ -68,9 +68,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9096595786586613893, guid: 0565802717f924547a8a27c60d7f41da, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2277058284352572770}
-    - targetCorrespondingSourceObject: {fileID: 9096595786586613893, guid: 0565802717f924547a8a27c60d7f41da, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5616797019609919714}
   m_SourcePrefab: {fileID: 100100000, guid: 0565802717f924547a8a27c60d7f41da, type: 3}
 --- !u!1 &6045214649693561672 stripped
 GameObject:
@@ -175,17 +172,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5616797019609919714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6045214649693561672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2879a1a440c3e8d4f80b7fde29164aec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  ScorePV: {fileID: 0}
