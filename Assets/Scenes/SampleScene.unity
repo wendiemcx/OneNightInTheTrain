@@ -8996,7 +8996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817638361354391145, guid: 32fce1012f8c24c43af86f00f457f500, type: 3}
       propertyPath: canSprint
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6817638361354391145, guid: 32fce1012f8c24c43af86f00f457f500, type: 3}
       propertyPath: crouchKey_L
@@ -9008,7 +9008,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817638361354391145, guid: 32fce1012f8c24c43af86f00f457f500, type: 3}
       propertyPath: toggleSprint
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6817638361354391147, guid: 32fce1012f8c24c43af86f00f457f500, type: 3}
       propertyPath: m_Name
@@ -9820,8 +9820,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1366020199}
   - component: {fileID: 1366020200}
+  - component: {fileID: 1366020201}
   m_Layer: 0
-  m_Name: box
+  m_Name: box_porte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9835,13 +9836,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366020198}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.909, y: 0, z: 108.977}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.081207, y: -0, z: 102.6743}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1788047386}
-  m_Father: {fileID: 1665951686}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1366020200
 BoxCollider:
@@ -9864,6 +9865,26 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.2640152, y: 2.0227482, z: 0.8055115}
   m_Center: {x: -0.1320076, y: 1.2251035, z: -0.9195938}
+--- !u!114 &1366020201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366020198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32159743cb0481141872db3f7e11460d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hache_affiche: {fileID: 75770148}
+  destruction: 5
+  porte: {fileID: 1788047387}
+  baton: {fileID: 2190771590474892932}
+  fer: {fileID: 7557912470802425394}
+  hache: {fileID: 1317452696303449814}
+  timer_anim_hache: 0
+  timer_flag: 0
 --- !u!4 &1386625222 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 611958026575216595, guid: 597fb210753275c458beaf3d9fbcbd26, type: 3}
@@ -10446,13 +10467,10 @@ PrefabInstance:
       addedObject: {fileID: 1788047388}
     - targetCorrespondingSourceObject: {fileID: 3205246627001655776, guid: c057be82afe1c594b9b5129cecd27ff1, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1788047391}
+      addedObject: {fileID: 1788047392}
     - targetCorrespondingSourceObject: {fileID: 3205246627001655776, guid: c057be82afe1c594b9b5129cecd27ff1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1788047393}
-    - targetCorrespondingSourceObject: {fileID: 3205246627001655776, guid: c057be82afe1c594b9b5129cecd27ff1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1788047392}
   m_SourcePrefab: {fileID: 100100000, guid: c057be82afe1c594b9b5129cecd27ff1, type: 3}
 --- !u!4 &1788047386 stripped
 Transform:
@@ -10529,27 +10547,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.046477627, y: 0.053742398, z: 0.029427994}
-  m_Center: {x: 0.0088252025, y: 0.033090066, z: 0.40712073}
---- !u!114 &1788047391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1788047387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32159743cb0481141872db3f7e11460d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hache_affiche: {fileID: 75770148}
-  destruction: 5
-  porte: {fileID: 1788047387}
+  m_Size: {x: 0.046477627, y: 0.053742398, z: 0.0042928653}
+  m_Center: {x: 0.0088252025, y: 0.033090066, z: 0.39455315}
 --- !u!95 &1788047392
 Animator:
   serializedVersion: 5
@@ -10594,6 +10597,7 @@ GameObject:
   - component: {fileID: 1836344069}
   - component: {fileID: 1836344071}
   - component: {fileID: 1836344070}
+  - component: {fileID: 1836344072}
   m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
@@ -10658,6 +10662,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1836344068}
   m_CullTransparentMesh: 1
+--- !u!95 &1836344072
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836344068}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 288d61137ce6c1c4db98d546e09a1bda, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1850008090 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 611958026575216595, guid: 597fb210753275c458beaf3d9fbcbd26, type: 3}
@@ -10950,9 +10975,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7297609445957913240, guid: d8f98f3144d80854e959b90dcaea9729, type: 3}
       insertIndex: 5
       addedObject: {fileID: 765609208}
-    - targetCorrespondingSourceObject: {fileID: 7297609445957913240, guid: d8f98f3144d80854e959b90dcaea9729, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1366020199}
     - targetCorrespondingSourceObject: {fileID: 2440604217599543656, guid: d8f98f3144d80854e959b90dcaea9729, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1430510877}
@@ -11983,6 +12005,7 @@ SceneRoots:
   - {fileID: 886347215}
   - {fileID: 75861233}
   - {fileID: 1980961312}
+  - {fileID: 1366020199}
   - {fileID: 693040435}
   - {fileID: 768179205}
   - {fileID: 430800757}
