@@ -46,7 +46,7 @@ public class ctrl_sparks : MonoBehaviour
             SUPERCharacterAIO playerCharacterAIO = other.GetComponent<SUPERCharacterAIO>();
             //Instantiate(eclair, transform.position, Quaternion.identity);
 
-            playerCharacterAIO.chockDuration = 2.0f;
+            playerCharacterAIO.chockDuration = 3.0f;
             playerCharacterAIO.currentGroundSpeed = 0;
 
         }

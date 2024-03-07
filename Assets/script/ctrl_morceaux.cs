@@ -29,7 +29,7 @@ public class ctrl_morceaux : MonoBehaviour
         if (other.name == "perso" && isActivated)
         {
 
-            GameManager.PV = GameManager.PV - 10;
+            GameManager.PV = GameManager.PV - 25;
             ScorePV.GetComponent<Image>().fillAmount = GameManager.PV / 100.0f;
             specialVirtualCameraBehaviour.PlayImpulse();
         }
