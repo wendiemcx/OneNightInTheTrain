@@ -45,7 +45,6 @@ public class ctrl_glass : MonoBehaviour
                    timer_flag = true;
                     hache.GetComponent<Animator>().SetTrigger("tapptrig");
                     Debug.Log("son de bois qui casse");
-                    son.Play(0);
                 }
 
                 if (timer_flag == true)
@@ -57,6 +56,7 @@ public class ctrl_glass : MonoBehaviour
                 if (timer_anim_hache > 0.5f)
                 {
                     destruction = destruction - 1;
+                    son.Play(0);
                     timer_anim_hache = 0.0f;
                     timer_flag = false;
 
