@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.014089411, g: 0.01358811, b: 0.0060810577, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12026,7 +12026,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: _Train
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1466598528016572605, guid: d8f98f3144d80854e959b90dcaea9729, type: 3}
     m_RemovedGameObjects:
     - {fileID: 4777292506119595794, guid: d8f98f3144d80854e959b90dcaea9729, type: 3}
     m_AddedGameObjects:
