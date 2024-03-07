@@ -9,11 +9,12 @@ public class ctrl_active_morceaux : MonoBehaviour
     public float timer;
     public float keepActivatedTimer = 5;
     public float keepActivatedTimerParticle = 8;
-    public AudioClip son;
     public float currentKeepActivatedTimer;
+    AudioSource son;
     // Start is called before the first frame update
     void Start()
     {
+        son = GetComponent<AudioSource>();
         timer = 0.0f;
         HitTimer = Random.Range(5, 10);
         currentKeepActivatedTimer = keepActivatedTimer;
@@ -39,7 +40,8 @@ public class ctrl_active_morceaux : MonoBehaviour
             timer = timer + Time.deltaTime;
             if (timer > HitTimer)
             {
-                AudioSource.PlayClipAtPoint(son, morceaux.transform.position);
+                son.pitch = Random.Range(0.85f, 1.15f);
+                son.Play(0);
                 timer = 0.0f;
                 HitTimer = Random.Range(5, 10);
                 currentKeepActivatedTimer = 0;
