@@ -26,6 +26,7 @@ public class ctrl_active_spark : MonoBehaviour
             sparks.SetActive(true);
             if (son.isPlaying == false)
             {
+                son.pitch = Random.Range(0.85f, 1.15f);
                 son.Play(0);
             }
         }

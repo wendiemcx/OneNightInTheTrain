@@ -15,7 +15,7 @@ public class ctrl_sparks : MonoBehaviour
     public GameObject ScorePV;
     public GameObject eclair;
     public float duration = 0.5f;
-    public AudioSource son;
+    public AudioClip son;
     bool isPlayerInTrigger;
 
     // Start is called before the first frame update
@@ -27,7 +27,7 @@ public class ctrl_sparks : MonoBehaviour
         GameManager.PV = 100;
         ScorePV = GameObject.Find("Progressbar");
         EclairUI = FindObjectOfType<ctrl_sparks2>();
-        son = GetComponent<AudioSource>();
+        
     }
 
     private void Update()
@@ -39,7 +39,7 @@ public class ctrl_sparks : MonoBehaviour
     {
         if (other.name == "perso")
         {
-            son.Play(0);
+            AudioSource.PlayClipAtPoint(son, gameObject.transform.position);
             EclairUI.DisplayElec(duration);
             GameManager.PV = GameManager.PV - 10;
             ScorePV.GetComponent<Image>().fillAmount = GameManager.PV / 100.0f;
