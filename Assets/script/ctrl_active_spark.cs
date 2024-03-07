@@ -24,7 +24,10 @@ public class ctrl_active_spark : MonoBehaviour
         if (timer > 5.0f)
         {
             sparks.SetActive(true);
-            son.Play(0);
+            if (son.isPlaying == false)
+            {
+                son.Play(0);
+            }
         }
 
         if (timer >6.0f)

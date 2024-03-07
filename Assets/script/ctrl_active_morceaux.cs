@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class ctrl_active_morceaux : MonoBehaviour
 {
-    public GameObject morceaux;
+    public ctrl_morceaux morceaux;
     float HitTimer;
     public float timer;
-    public float keepActivatedTimer = 1;
-
+    public float keepActivatedTimer = 5;
+    public float keepActivatedTimerParticle = 8;
+    public AudioClip son;
     public float currentKeepActivatedTimer;
     // Start is called before the first frame update
     void Start()
@@ -21,12 +22,16 @@ public class ctrl_active_morceaux : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentKeepActivatedTimer < keepActivatedTimer)
+        if (currentKeepActivatedTimer < keepActivatedTimerParticle)
         {
             currentKeepActivatedTimer += Time.deltaTime;
-            if(currentKeepActivatedTimer >= keepActivatedTimer)
+            if (currentKeepActivatedTimer >= keepActivatedTimer)
             {
-                morceaux.SetActive(false);
+                morceaux.isActivated = false;
+            }
+            if (currentKeepActivatedTimer >= keepActivatedTimerParticle)
+            {
+                morceaux.gameObject.SetActive(false);
             }
         }
         else
@@ -34,10 +39,12 @@ public class ctrl_active_morceaux : MonoBehaviour
             timer = timer + Time.deltaTime;
             if (timer > HitTimer)
             {
+                AudioSource.PlayClipAtPoint(son, morceaux.transform.position);
                 timer = 0.0f;
                 HitTimer = Random.Range(5, 10);
                 currentKeepActivatedTimer = 0;
-                morceaux.SetActive(true);
+                morceaux.gameObject.SetActive(true);
+                morceaux.isActivated = true;
 
             }
         }

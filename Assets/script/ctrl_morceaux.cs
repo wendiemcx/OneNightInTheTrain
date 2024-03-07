@@ -7,15 +7,16 @@ public class ctrl_morceaux : MonoBehaviour
 {
     public GameObject ScorePV;
     SpecialVirtualCameraBehaviour specialVirtualCameraBehaviour;
-    AudioSource son;
+    public bool isActivated = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        isActivated = true;
         GameManager.PV = 100;
         ScorePV = GameObject.Find("Progressbar");
         specialVirtualCameraBehaviour = FindObjectOfType<SpecialVirtualCameraBehaviour>();
-        son = GetComponent<AudioSource>();
+;
     }
 
     // Update is called once per frame
@@ -25,9 +26,9 @@ public class ctrl_morceaux : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name == "perso")
+        if (other.name == "perso" && isActivated)
         {
-            son.Play(0);
+
             GameManager.PV = GameManager.PV - 10;
             ScorePV.GetComponent<Image>().fillAmount = GameManager.PV / 100.0f;
             specialVirtualCameraBehaviour.PlayImpulse();
