@@ -8,6 +8,7 @@ public class ctrl_morceaux : MonoBehaviour
     public GameObject ScorePV;
     SpecialVirtualCameraBehaviour specialVirtualCameraBehaviour;
     AudioSource son;
+
     // Start is called before the first frame update
     void Start()
     {
