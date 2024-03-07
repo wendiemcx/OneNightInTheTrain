@@ -10,15 +10,25 @@ public class LevelLoader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        foreach(int sceneIndexes in _scenesIndexesToLoad)
-        {
-            SceneManager.LoadScene(sceneIndexes, LoadSceneMode. Single);
-        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void LoadLevel()
+    {
+        foreach (int sceneIndexes in _scenesIndexesToLoad)
+        {
+            SceneManager.LoadScene(sceneIndexes, LoadSceneMode.Single);
+        }
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
