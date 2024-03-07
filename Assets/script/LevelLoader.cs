@@ -12,7 +12,7 @@ public class LevelLoader : MonoBehaviour
     {
         foreach(int sceneIndexes in _scenesIndexesToLoad)
         {
-            SceneManager.LoadScene(sceneIndexes, LoadSceneMode.Additive);
+            SceneManager.LoadScene(sceneIndexes, LoadSceneMode. Single);
         }
     }
 
