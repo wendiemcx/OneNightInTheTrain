@@ -218,7 +218,7 @@ Material:
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
     - _RefractionModel: 0
-    - _Smoothness: 0.604
+    - _Smoothness: 0.458
     - _SmoothnessRemapMax: 0.6770834
     - _SmoothnessRemapMin: 0
     - _SpecularAAScreenSpaceVariance: 0.1

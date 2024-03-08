@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ctrl_hache : MonoBehaviour
 {
     public GameObject hache_affiche;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class ctrl_hache : MonoBehaviour
 
             if (Input.GetKey(KeyCode.E))
             {
+
                 Destroy(gameObject);
                 hache_affiche.SetActive(true);
             }   

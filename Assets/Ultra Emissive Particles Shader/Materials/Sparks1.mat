@@ -11,7 +11,8 @@ Material:
   m_Shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _EMISSION
   m_InvalidKeywords:
   - _DISABLE_DECALS
   - _DISABLE_SSR
@@ -158,7 +159,7 @@ Material:
     - _DstBlend: 0
     - _EMISSION_WEIGHT: 1
     - _Emission: 2
-    - _EmissionEnabled: 0
+    - _EmissionEnabled: 1
     - _Emmission: 2
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
@@ -215,7 +216,7 @@ Material:
     - _DiffuseColor: {r: 0.7647059, g: 0.7491946, b: 0.20242216, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: 1, a: 0}
     - _EMISSION_COLOR: {r: 0, g: 0, b: 0, a: 0}
-    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 4.000002, g: 2.2995744, b: 0, a: 1}
     - _REFLECTIONS_COLOR: {r: 1, g: 1, b: 1, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
     - _TRANSPARENCY: {r: 1, g: 1, b: 1, a: 1}
