@@ -15,7 +15,7 @@ public class ctrl_gameover : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         New.onClick.AddListener(action_New);
-        Menu.onClick.AddListener(action_Menu);
+        //Menu.onClick.AddListener(action_Menu);
     }
 
     void action_New()
@@ -23,8 +23,8 @@ public class ctrl_gameover : MonoBehaviour
         SceneManager.LoadScene("Scenes/SampleScene");
     }
 
-    void action_Menu()
+    /*void action_Menu()
     {
         SceneManager.LoadScene("Scenes/GameOver");
-    }
+    }*/
 }
