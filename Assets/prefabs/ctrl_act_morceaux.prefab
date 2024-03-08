@@ -49,6 +49,7 @@ MonoBehaviour:
   morceaux: {fileID: 9115398008038495565}
   timer: 0
   keepActivatedTimer: 2.5
+  keepActivatedTimerParticle: 8
   currentKeepActivatedTimer: 0
 --- !u!114 &7493929405881790405
 MonoBehaviour:
