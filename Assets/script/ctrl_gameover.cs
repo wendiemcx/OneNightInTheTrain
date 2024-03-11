@@ -24,6 +24,6 @@ public class ctrl_gameover : MonoBehaviour
 
     void action_Menu()
     {
-        SceneManager.LoadScene("Scenes/GameOver");
+        SceneManager.LoadScene("Scenes/Menu");
     }
 }

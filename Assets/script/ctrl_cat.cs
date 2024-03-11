@@ -21,7 +21,11 @@ public class ctrl_cat : MonoBehaviour
     {
         if (other.name =="perso")
         {
-            cat.SetActive(true);
+            if (GameManager.PV >= 80)
+            {
+                cat.SetActive(true);
+            }
+            
 
         }
 
