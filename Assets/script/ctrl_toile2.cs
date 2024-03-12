@@ -8,7 +8,12 @@ public class ctrl_toile2 : MonoBehaviour
 {
     float timer;
     bool flag;
+    AudioSource son;
 
+    private void Start()
+    {
+        son = GetComponent<AudioSource>();
+    }
     void Update()
     {
         if (flag)
@@ -26,6 +31,7 @@ public class ctrl_toile2 : MonoBehaviour
     {
         timer = duration;
         gameObject.GetComponent<RawImage>().enabled = true;
+        son.Play(0);
         flag = true;
     }
 }

@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using SUPERCharacter;
 using UnityEngine;
 
 public class start : MonoBehaviour
 {
     public GameObject perso;
+
+   
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +23,6 @@ public class start : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+ 
     }
 }
